@@ -7,7 +7,9 @@ const message = process.env.MESSAGE;
 
 const todb = () => {
     console.log('running...')
-    console.log('Message:', message);
+    if (message == "Hello World!") {
+        console.log('Message:', message);
+    };
 };
 
 todb();

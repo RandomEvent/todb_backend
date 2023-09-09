@@ -20,8 +20,12 @@ jobs:
       - name: Set Environment Variable
         env:
             MESSAGE: ${{ secrets.MESSAGE }}
+            WEATHERKEY: ${{ secrets.WEATHERKEY }}
+            MONGOKEY: ${{ secrets.MONGOKEY }}
         run: |
           echo "MESSAGE=$MESSAGE" >> $GITHUB_ENV
+          echo "WEATHERKEY=$WEATHERKEY" >> $GITHUB_ENV
+          echo "MONGOKEY=$MONGOKEY" >> $GITHUB_ENV
 
       - name: Install dependencies
         run: npm install
