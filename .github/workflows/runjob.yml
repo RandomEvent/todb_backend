@@ -19,4 +19,5 @@ jobs:
           MESSAGE: ${{ secrets.MESSAGE }}
           # WEATHERKEY: ${{ secrets.WEATHERKEY }}
           # MONGOKEY: ${{ secrets.MONGOKEY }}
+      - run: echo $MESSAGE
       - run: npm run forrest
