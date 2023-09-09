@@ -9,7 +9,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     name: Run Forrest Run!
-    
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -19,7 +19,7 @@ jobs:
           node-version: 16
       - name: Set Environment Variable
         env:
-            MY_SECRET_KEY: ${{ secrets.MESSAGE }}
+            MESSAGE: ${{ secrets.MESSAGE }}
         run: |
           echo "MESSAGE=$MESSAGE" >> $GITHUB_ENV
 
