@@ -16,6 +16,7 @@ jobs:
           node-version: 16
       - run: npm ci
         env:
-          WEATHERKEY: ${{ secrets.WEATHERKEY }}
-          MONGOKEY: ${{ secrets.MONGOKEY }}
+          MESSAGE: ${{ secrets.MESSAGE }}
+          # WEATHERKEY: ${{ secrets.WEATHERKEY }}
+          # MONGOKEY: ${{ secrets.MONGOKEY }}
       - run: npm run forrest
